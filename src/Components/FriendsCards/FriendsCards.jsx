@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const FriendsCard = ({ friend }) => {
-    console.log(friend)
+    // console.log(friend)
 
     return (
-        <div className='shadow rounded-xl py-8'>
+        <Link href={`/friends/${friend.id}`} className='shadow rounded-xl py-8'>
 
                     <div className='flex justify-center items-center'>
                         <Image
@@ -42,7 +43,7 @@ const FriendsCard = ({ friend }) => {
 
 
 
-        </div>
+        </Link>
     );
 };
 

@@ -11,7 +11,7 @@ const AllFriends = async () => {
     });
     const friends = await res.json();
 
-    console.log(friends)
+    // console.log(friends)
     return (
         <div className='mt-8 w-[80%] mx-auto'>
 
