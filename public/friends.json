@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Michael Carter",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "michael.carter@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Met during computer science degree. Built multiple hackathon projects together.",
+    "goal": 14,
+    "next_due_date": "2025-07-20"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Mitchell",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "sarah.mitchell@gmail.com",
+    "days_since_contact": 12,
+    "status": "almost due",
+    "tags": ["work", "design"],
+    "bio": "Former coworker from startup. We often discuss UI/UX and product ideas.",
+    "goal": 14,
+    "next_due_date": "2025-07-18"
+  },
+  {
+    "id": 3,
+    "name": "Daniel Nguyen",
+    "picture": "https://randomuser.me/api/portraits/men/55.jpg",
+    "email": "daniel.nguyen@gmail.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["gym", "fitness"],
+    "bio": "Gym partner. Helps me stay consistent with workouts and discipline.",
+    "goal": 14,
+    "next_due_date": "2025-07-28"
+  },
+  {
+    "id": 4,
+    "name": "Aisha Rahman",
+    "picture": "https://randomuser.me/api/portraits/women/68.jpg",
+    "email": "aisha.rahman@gmail.com",
+    "days_since_contact": 20,
+    "status": "overdue",
+    "tags": ["school", "old friend"],
+    "bio": "School friend. We reconnect occasionally to talk about life and career.",
+    "goal": 14,
+    "next_due_date": "2025-07-15"
+  },
+  {
+    "id": 5,
+    "name": "James Walker",
+    "picture": "https://randomuser.me/api/portraits/men/71.jpg",
+    "email": "james.walker@gmail.com",
+    "days_since_contact": 13,
+    "status": "almost due",
+    "tags": ["startup", "tech"],
+    "bio": "Met at tech meetup. Discuss SaaS ideas and side projects.",
+    "goal": 14,
+    "next_due_date": "2025-07-17"
+  },
+  {
+    "id": 6,
+    "name": "Emily Rodriguez",
+    "picture": "https://randomuser.me/api/portraits/women/22.jpg",
+    "email": "emily.rodriguez@gmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["university", "research"],
+    "bio": "Research partner from university. Collaborating on AI learning resources.",
+    "goal": 14,
+    "next_due_date": "2025-07-30"
+  },
+  {
+    "id": 7,
+    "name": "Omar Hassan",
+    "picture": "https://randomuser.me/api/portraits/men/45.jpg",
+    "email": "omar.hassan@gmail.com",
+    "days_since_contact": 16,
+    "status": "overdue",
+    "tags": ["community", "mosque"],
+    "bio": "Met through community volunteering. Discuss leadership and personal growth.",
+    "goal": 14,
+    "next_due_date": "2025-07-16"
+  },
+  {
+    "id": 8,
+    "name": "Laura Bennett",
+    "picture": "https://randomuser.me/api/portraits/women/39.jpg",
+    "email": "laura.bennett@gmail.com",
+    "days_since_contact": 7,
+    "status": "on-track",
+    "tags": ["design", "freelance"],
+    "bio": "Freelance designer friend. Share portfolio feedback and opportunities.",
+    "goal": 14,
+    "next_due_date": "2025-07-25"
+  }
+]
