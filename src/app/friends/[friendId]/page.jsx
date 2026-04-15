@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
-import { MdNotificationsPaused, MdOutlineNotificationsPaused } from 'react-icons/md';
-import { RiArchiveLine, RiDeleteBinLine } from 'react-icons/ri';
+import { LuPhoneCall } from 'react-icons/lu';
+import { MdNotificationsPaused, MdOutlineNotificationsPaused, MdOutlineTextsms } from 'react-icons/md';
+import { PiVideoCamera } from 'react-icons/pi';
+import { RiArchiveLine, RiDeleteBinLine, RiNotificationSnoozeLine } from 'react-icons/ri';
 
 const FriendDetails = async ({ params }) => {
 
@@ -22,12 +24,12 @@ const FriendDetails = async ({ params }) => {
 
 
     return (
-        <div className='grid grid-cols-3 w-[85%] mx-auto my-10'>
+        <div className='grid grid-cols-3 w-[85%] mx-auto my-10 gap-4'>
 
 
-            <div className='col-span-1 border p-2'>
+            <div className='col-span-1 p-4'>
 
-                <div className='shadow rounded-xl space-y-3 py-6 px-4'>
+                <div className='shadow rounded-xl space-y-3 py-2 px-4'>
 
 
                     <div className='flex justify-center items-center'>
@@ -69,18 +71,19 @@ const FriendDetails = async ({ params }) => {
 
 
                 <div className='shadow rounded-xl my-2 p-4 flex justify-center'>
-                    <button className='flex gap-4 items-center'><MdOutlineNotificationsPaused />
+                    <button className='flex gap-2 items-center'><RiNotificationSnoozeLine />
+
 
                         Snooze 2 weeks</button>
 
                 </div>
                 <div className='shadow rounded-xl my-2 p-4 flex justify-center'>
-                    <button className='flex gap-4 items-center'><RiArchiveLine />
+                    <button className='flex gap-2 items-center'><RiArchiveLine />
                         Archive</button>
 
                 </div>
                 <div className='shadow rounded-xl my-2 p-4 flex justify-center'>
-                    <button className='flex gap-4 items-center text-red-500'> <RiDeleteBinLine />
+                    <button className='flex gap-2 items-center text-red-500'> <RiDeleteBinLine />
 
 
                         Delete</button>
@@ -95,8 +98,54 @@ const FriendDetails = async ({ params }) => {
 
             {/* 2nd part */}
 
-            <div className='col-span-2 border p-10'>
-                <h1>Eta ela ki </h1>
+            <div className='col-span-2 p-4'>
+
+
+                <div className='grid grid-cols-3 gap-6 text-center'>
+                    <div className='shadow rounded-xl p-8'>
+                        <p className='text-[#244D3F] text-2xl font-semibold'>{FriendsDetails.days_since_contact}</p>
+                        <p className='text-[#64748B] text-[13px]'>Days Since Contact</p>
+
+                    </div>
+                    <div className='shadow rounded-xl p-8'>
+                        <p className='text-[#244D3F] text-2xl font-semibold'>{FriendsDetails.goal}</p>
+                        <p className='text-[#64748B] text-[13px]'>Goal (Days)</p>
+
+                    </div>
+                    <div className='shadow rounded-xl p-8'>
+                        <p className='text-[#244D3F] text-2xl font-semibold'>{FriendsDetails.next_due_date}</p>
+                        <p className='text-[#64748B] text-[13px]'>Next Due</p>
+
+                    </div>
+
+                </div>
+
+
+                <div className='shadow rounded-xl  p-6 my-4'>
+                    <div className='flex justify-between '>
+                        <p className='text-[#244D3F] text-[18px]'>Relationship Goal</p>
+                        <button className='btn'>Edit</button>
+                    </div>
+
+                    <p className='text-[#64748B] text-[14px]'>Connect every <span className='font-semibold text-black'> 30 days </span></p>
+                </div>
+
+
+                <div className='shadow rounded-xl p-10'>
+                    <p className='text-xl font-semibold'>Quick Check-In</p>
+
+                    <div>
+                        <div className='flex gap-10 mt-4'>
+                            <button className='btn px-18 py-8 text-2xl'><LuPhoneCall /></button>
+                            <button className='btn px-18 py-8 text-2xl'><MdOutlineTextsms />
+                            </button>
+                            <button className='btn px-18 py-8 text-2xl'><PiVideoCamera />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
 
             </div>
         </div>
