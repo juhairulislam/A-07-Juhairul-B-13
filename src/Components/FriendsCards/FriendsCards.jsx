@@ -5,7 +5,7 @@ const FriendsCard = ({ friend }) => {
     console.log(friend)
 
     return (
-        <div className='shadow rounded-xl'>
+        <div className='shadow rounded-xl p-8 '>
 
                     <div className='flex justify-center items-center'>
                         <Image
@@ -18,7 +18,7 @@ const FriendsCard = ({ friend }) => {
                     </div>
 
 
-                    <div>
+                    <div className='text-center my-3'>
                         <h2 className='font-bold'>{friend.name}</h2>
                         <p className='text-[#64748B] text-[13px]'>{`${friend.days_since_contact}d ago`}</p>
                     </div>
@@ -27,7 +27,7 @@ const FriendsCard = ({ friend }) => {
                    {
                     friend.tags?.map((tag,ind) => <div key={ind}>
 
-                        <p className='font-bold text-green-500 rounded-xl border border-green-500'>{tag}</p>
+                        <p className='text-[10px] rounded-xl px-2 py-1 bg-[#CBFADB] text-[#244D3F]'>{tag.toUpperCase()}</p>
 
                     </div>)
                   }
@@ -35,7 +35,7 @@ const FriendsCard = ({ friend }) => {
 
 
                     <div>
-                        <p className=''>{friend.status}</p>
+                        <p className={`text-[13px] mt-4 text-center text-white ${friend.status === 'Almost Due' ? 'bg-[#EFAD44]': friend.status=== 'On-Track'?'bg-[#244D3F]': friend.status === 'Overdue'?'bg-[#EF4444]':''}`}>{friend.status}</p>
                     </div>
 
            
