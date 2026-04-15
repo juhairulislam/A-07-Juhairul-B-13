@@ -24,7 +24,7 @@ const FriendDetails = async ({ params }) => {
 
 
     return (
-        <div className='grid grid-cols-1 md:grid-cols-3 w-[85%] mx-auto my-10 gap-4'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 w-[85%] mx-auto my-10 gap-4'>
 
 
             <div className='col-span-1 p-4'>
@@ -103,17 +103,17 @@ const FriendDetails = async ({ params }) => {
 
                 <div className='grid grid-cols-2  md:grid-cols-3 gap-6 text-center'>
                     <div className='shadow rounded-xl p-8'>
-                        <p className='text-[#244D3F] text-2xl font-semibold'>{FriendsDetails.days_since_contact}</p>
+                        <p className='text-[#244D3F] text-xl lg:text-2xl font-semibold'>{FriendsDetails.days_since_contact}</p>
                         <p className='text-[#64748B] text-[13px]'>Days Since Contact</p>
 
                     </div>
                     <div className='shadow rounded-xl p-8'>
-                        <p className='text-[#244D3F] text-2xl font-semibold'>{FriendsDetails.goal}</p>
+                        <p className='text-[#244D3F] text-xl lg:text-2xl font-semibold'>{FriendsDetails.goal}</p>
                         <p className='text-[#64748B] text-[13px]'>Goal (Days)</p>
 
                     </div>
                     <div className='shadow rounded-xl p-8'>
-                        <p className='text-[#244D3F] text-2xl font-semibold'>{FriendsDetails.next_due_date}</p>
+                        <p className='text-[#244D3F] text-xl lg:text-2xl font-semibold'>{FriendsDetails.next_due_date}</p>
                         <p className='text-[#64748B] text-[13px]'>Next Due</p>
 
                     </div>
@@ -131,15 +131,15 @@ const FriendDetails = async ({ params }) => {
                 </div>
 
 
-                <div className='shadow rounded-xl p-10'>
+                <div className='shadow rounded-xl p-6 lg:p-10'>
                     <p className='text-xl font-semibold'>Quick Check-In</p>
 
                     <div>
-                        <div className='flex flex-col md:flex-row gap-4 md:gap-10 mt-4'>
-                            <button className='btn px-18 py-8 text-2xl'><LuPhoneCall /></button>
-                            <button className='btn px-18 py-8 text-2xl'><MdOutlineTextsms />
+                        <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-4'>
+                            <button className='btn py-6 text-2xl'><LuPhoneCall /></button>
+                            <button className='btn py-6  text-2xl'><MdOutlineTextsms />
                             </button>
-                            <button className='btn px-18 py-8 text-2xl'><PiVideoCamera />
+                            <button className='btn py-6  text-2xl'><PiVideoCamera />
                             </button>
                         </div>
                     </div>
