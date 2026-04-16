@@ -7,18 +7,25 @@ import { MdOutlineTextsms } from 'react-icons/md';
 import { PiVideoCamera } from 'react-icons/pi';
 import { RiArchiveLine, RiDeleteBinLine, RiNotificationSnoozeLine } from 'react-icons/ri';
 
-const DetailsFriends = ({FriendsDetails}) => {
+const DetailsFriends = ({ FriendsDetails }) => {
 
 
-    const {data , setData} = useContext(HandleData);
+    const { data, setData } = useContext(HandleData);
 
 
-    const storeData = (f) =>{
+    const storeData = (timelineDetails, category) => {
 
-        setData(f);
+        setData((prev) => [
+            { ...timelineDetails, type: category, timestamp: new Date().toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+}) },
+            ...prev
+        ]);
     }
 
-    console.log(data)
+    // console.log(data)
 
 
 
@@ -135,10 +142,10 @@ const DetailsFriends = ({FriendsDetails}) => {
 
                     <div>
                         <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-4'>
-                            <button onClick={()=>storeData(FriendsDetails)} className='btn py-6 text-2xl'><LuPhoneCall /></button>
-                            <button className='btn py-6  text-2xl'><MdOutlineTextsms />
+                            <button onClick={() => storeData(FriendsDetails, 'call')} className='btn py-6 text-2xl'><LuPhoneCall /></button>
+                            <button onClick={() => storeData(FriendsDetails, 'text')} className='btn py-6  text-2xl'><MdOutlineTextsms />
                             </button>
-                            <button className='btn py-6  text-2xl'><PiVideoCamera />
+                            <button onClick={() => storeData(FriendsDetails, 'video')} className='btn py-6  text-2xl'><PiVideoCamera />
                             </button>
                         </div>
                     </div>

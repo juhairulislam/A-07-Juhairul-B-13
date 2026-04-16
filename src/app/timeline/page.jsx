@@ -1,9 +1,13 @@
-import React from 'react';
+'use client'
+import { HandleData } from '@/Context/Context';
+import React, { useContext } from 'react';
 
 const Timeline = () => {
+
+    const {data , setData} = useContext(HandleData) ;
+
     return (
         <div>
-            <h1>This is timeline re bhai</h1>
         </div>
     );
 };
