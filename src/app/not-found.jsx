@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const NotFound = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white px-4 w-[85%] mx-auto shadow rounded-xl my-6">
+    <div className="min-h-screen flex items-center justify-center bg-white px-4 w-[85%] mx-auto shadow rounded-xl md:my-6">
       
       <div className="text-center max-w-xl mx-auto">
         
