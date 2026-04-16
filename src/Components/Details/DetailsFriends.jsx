@@ -6,7 +6,7 @@ import { LuPhoneCall } from 'react-icons/lu';
 import { MdOutlineTextsms } from 'react-icons/md';
 import { PiVideoCamera } from 'react-icons/pi';
 import { RiArchiveLine, RiDeleteBinLine, RiNotificationSnoozeLine } from 'react-icons/ri';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 
 const DetailsFriends = ({ FriendsDetails }) => {
 
@@ -15,14 +15,26 @@ const DetailsFriends = ({ FriendsDetails }) => {
 
 
     const storeData = (timelineDetails, category) => {
-        toast.success(`${category} With ${timelineDetails.name}`) ;
+        toast.success(`${category} With ${timelineDetails.name}`, {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            // transition: Bounce,
+        });
 
         setData((prev) => [
-            { ...timelineDetails, type: category, timestamp: new Date().toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric'
-}) },
+            {
+                ...timelineDetails, type: category, timestamp: new Date().toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                })
+            },
             ...prev
         ]);
     }

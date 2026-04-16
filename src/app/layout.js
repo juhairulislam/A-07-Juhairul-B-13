@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/Components/Navbar/Navbar";
 import Footer from "@/Components/Footer/Footer";
 import Providers from "./lib/providers";
-import { ToastContainer } from "react-toastify";
+import { Bounce, ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html
-    data-theme="light"
+      data-theme="light"
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
@@ -31,14 +31,26 @@ export default function RootLayout({ children }) {
 
         <Providers>
 
-        <Navbar></Navbar>
-        {children}
-        <Footer></Footer>
+          <Navbar></Navbar>
+          {children}
+          <Footer></Footer>
 
         </Providers>
-                <ToastContainer />
+        <ToastContainer
+          position="top-center"
+          autoClose={1000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+          transition={Bounce}
+        />
 
-        </body>
+      </body>
 
     </html>
   );
