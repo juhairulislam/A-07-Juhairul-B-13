@@ -15,7 +15,7 @@ const DetailsFriends = ({ FriendsDetails }) => {
 
 
     const storeData = (timelineDetails, category) => {
-        toast.success(`${category} with ${timelineDetails.name}`)
+        toast.success(`${category} With ${timelineDetails.name}`) ;
 
         setData((prev) => [
             { ...timelineDetails, type: category, timestamp: new Date().toLocaleDateString('en-US', {
