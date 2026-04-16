@@ -6,6 +6,7 @@ import { LuPhoneCall } from 'react-icons/lu';
 import { MdOutlineTextsms } from 'react-icons/md';
 import { PiVideoCamera } from 'react-icons/pi';
 import { RiArchiveLine, RiDeleteBinLine, RiNotificationSnoozeLine } from 'react-icons/ri';
+import { toast } from 'react-toastify';
 
 const DetailsFriends = ({ FriendsDetails }) => {
 
@@ -14,6 +15,7 @@ const DetailsFriends = ({ FriendsDetails }) => {
 
 
     const storeData = (timelineDetails, category) => {
+        toast.success(`${category} with ${timelineDetails.name}`)
 
         setData((prev) => [
             { ...timelineDetails, type: category, timestamp: new Date().toLocaleDateString('en-US', {
@@ -142,10 +144,10 @@ const DetailsFriends = ({ FriendsDetails }) => {
 
                     <div>
                         <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-4'>
-                            <button onClick={() => storeData(FriendsDetails, 'call')} className='btn py-6 text-2xl'><LuPhoneCall /></button>
-                            <button onClick={() => storeData(FriendsDetails, 'text')} className='btn py-6  text-2xl'><MdOutlineTextsms />
+                            <button onClick={() => storeData(FriendsDetails, 'Call')} className='btn py-6 text-2xl'><LuPhoneCall /></button>
+                            <button onClick={() => storeData(FriendsDetails, 'Text')} className='btn py-6  text-2xl'><MdOutlineTextsms />
                             </button>
-                            <button onClick={() => storeData(FriendsDetails, 'video')} className='btn py-6  text-2xl'><PiVideoCamera />
+                            <button onClick={() => storeData(FriendsDetails, 'Video')} className='btn py-6  text-2xl'><PiVideoCamera />
                             </button>
                         </div>
                     </div>

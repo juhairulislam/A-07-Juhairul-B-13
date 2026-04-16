@@ -6,6 +6,8 @@ const Timeline = () => {
 
     const {data , setData} = useContext(HandleData) ;
 
+    // console.log(data)
+
     return (
         <div>
         </div>
