@@ -1,5 +1,6 @@
 'use client'
 import { HandleData } from '@/Context/Context';
+import Link from 'next/link';
 import React, { useContext } from 'react';
 import { Legend, Pie, PieChart, Tooltip } from 'recharts';
 
@@ -26,7 +27,7 @@ const Stats = () => {
 
 
     return (
-        <div className='w-[85%] mx-auto p-4'>
+        <div className='w-[85%] mx-auto p-4 min-h-screen'>
 
             <h1 className='text-2xl md:text-4xl font-bold mt-10'>Friendship Analytics</h1>
 
@@ -36,8 +37,10 @@ const Stats = () => {
 
                 {
                     totalData === 0 ? <div className='p-10 md:p-15 text-center'>
-                            <h1 className='text-2xl md:text-3xl font-bold text-slate-500'>No Data Available</h1>
-
+<div>
+                                <h1 className='text-xl md:text-3xl font-bold text-slate-500'>No Data Available</h1>
+<Link className='btn btn-active my-4 font-sans' href={'/'}>Go To Home</Link>
+</div>
                         </div> : <div className='flex justify-center'>
 
 
