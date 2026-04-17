@@ -46,7 +46,11 @@ const Timeline = () => {
                     </select>
                 </div>
 
-                <div>
+                {
+                    displayData.length === 0? <div className='p-15 text-center shadow rounded-xl my-4'>
+                        <h1 className='text-3xl font-bold text-slate-500'>Timeline Is Empty Now</h1>
+
+                    </div> : <div>
 
                     {
                         displayData.map((history, ind) => <div className='shadow rounded-xl my-6 p-2' key={ind}>
@@ -76,6 +80,9 @@ const Timeline = () => {
                         </div>)
                     }
                 </div>
+                }
+
+               
             </div>
         </div>
     );
