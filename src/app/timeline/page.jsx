@@ -6,6 +6,7 @@ import callPhoto from '../../../public/assets/call.png'
 import textPhoto from '../../../public/assets/text.png'
 import videoPhoto from '../../../public/assets/video.png'
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Timeline = () => {
 
@@ -48,7 +49,9 @@ const Timeline = () => {
 
                 {
                     displayData.length === 0? <div className='p-10 md:p-15 text-center shadow rounded-xl my-4'>
-                        <h1 className='text-2xl md:text-3xl font-bold text-slate-500'>Timeline Is Empty Now</h1>
+                        <h1 className='text-2xl md:text-3xl font-bold text-slate-500 my-8'>Timeline Is Empty Now</h1>
+                        <Link className='btn btn-active my-4 font-sans' href={'/'}>Go To Home</Link>
+                        
 
                     </div> : <div>
 

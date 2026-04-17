@@ -38,7 +38,7 @@ const Stats = () => {
                 {
                     totalData === 0 ? <div className='p-10 md:p-15 text-center'>
 <div>
-                                <h1 className='text-xl md:text-3xl font-bold text-slate-500'>No Data Available</h1>
+                                <h1 className='text-xl md:text-3xl font-bold text-slate-500 my-8'>No Data Available</h1>
 <Link className='btn btn-active my-4 font-sans' href={'/'}>Go To Home</Link>
 </div>
                         </div> : <div className='flex justify-center'>
