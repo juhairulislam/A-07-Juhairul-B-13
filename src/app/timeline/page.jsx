@@ -15,7 +15,7 @@ const Timeline = () => {
 
     const [filterType , setFilterType] = useState('Filter timeline') ;
 
-    const displayData = filterType === 'Filter timeline'? data : data.filter(item => item.type === filterType);
+    const displayData = (filterType === 'Filter timeline' || filterType === 'All')? data : data.filter(item => item.type === filterType);
 
 
     const handleSort = (e) => {
@@ -39,6 +39,7 @@ const Timeline = () => {
                 <div>
                     <select defaultValue="Filter timeline" onChange={handleSort} className="select">
                         <option disabled={true}>Filter timeline</option>
+                        <option value="All">All</option>
                         <option value="Call" >Call</option>
                         <option value="Text">Text</option>
                         <option value="Video">Video</option>
