@@ -31,7 +31,7 @@ const Timeline = () => {
     // console.log(data)
 
     return (
-        <div className='w-[85%] mx-auto my-10'>
+        <div className='w-[85%] mx-auto my-10 min-h-screen'>
 
             <div>
                 <h1 className='font-bold text-3xl my-6'>Timeline</h1>
@@ -47,8 +47,8 @@ const Timeline = () => {
                 </div>
 
                 {
-                    displayData.length === 0? <div className='p-15 text-center shadow rounded-xl my-4'>
-                        <h1 className='text-3xl font-bold text-slate-500'>Timeline Is Empty Now</h1>
+                    displayData.length === 0? <div className='p-10 md:p-15 text-center shadow rounded-xl my-4'>
+                        <h1 className='text-2xl md:text-3xl font-bold text-slate-500'>Timeline Is Empty Now</h1>
 
                     </div> : <div>
 
