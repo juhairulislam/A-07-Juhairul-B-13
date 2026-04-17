@@ -7,9 +7,7 @@ const FriendDetails = async ({ params }) => {
     const { friendId } = await params;
 
 
-    const res = await fetch('http://localhost:3000/friends.json', {
-        cache: 'no-store'
-    });
+    const res = await fetch('https://a-07-juhairul-b-13-f5xy.vercel.app/friends.json');
     const AllFriendsData = await res.json();
 
     // console.log(AllFriendsData)
